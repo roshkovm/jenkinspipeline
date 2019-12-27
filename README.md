@@ -55,7 +55,7 @@ _Script Path: Jenkinsfile_ <br>
 __Note:__<br>
 Example __Jenkinsfile__:<br>
 
-```console
+```groovy
 pipeline {
     agent any
     stages {
