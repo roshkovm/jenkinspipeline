@@ -24,7 +24,6 @@ __x.x.x.x__ - IP address Jenkins Server
 
 ##### 5. Connect to Jenkins Server:
 http://x.x.x.x:8080
-
     # cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword
     xxxxxxxxxxxxx
 
@@ -32,11 +31,12 @@ __NOTE__:<br>
 Put hash in Jenkins login page. Go over Jenkins Menu and Install suggested modules and create new user.
 
 ##### 6. Restart Jenkins Docker instance (check, that configuration data is saved)
-    # docker ps
-    # docker stop instance-id
-    # docker rm instance-id
-    # docker run -d -it -p 8080:8080 -p 50000:50000 -u 0 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock 4oh4/jenkins-docker
-
+```bash
+docker ps
+docker stop instance-id
+docker rm instance-id
+docker run -d -it -p 8080:8080 -p 50000:50000 -u 0 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock 4oh4/jenkins-docker
+```
 ##### 7. Create Jenkins Simple Pipeline Job
 <b>_Build Triggers_ </b><br>
 _[x] GitHub hook trigger for GITScm polling_ <br>
