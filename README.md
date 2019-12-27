@@ -20,7 +20,6 @@ __x.x.x.x__ - IP address Jenkins Server
 # docker volume ls
 DRIVER              VOLUME NAME
 local               jenkins_home
-
 # cd /var/lib/docker/volumes
 # ls -l
 jenkins_home
