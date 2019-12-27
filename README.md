@@ -56,7 +56,7 @@ __Note:__<br>
 Example __Jenkinsfile__:<br>
 
 ```console
-	pipeline {
+pipeline {
     agent any
     stages {
     stage('Preparation') {
@@ -87,7 +87,7 @@ Example __Jenkinsfile__:<br>
          sh 'chmod +x ./docker_status.sh'
          sh './docker_status.sh'
        }
-      }
-     }
     }
+  }
+}
 ```
