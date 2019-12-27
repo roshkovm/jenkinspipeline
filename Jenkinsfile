@@ -1,12 +1,7 @@
 pipeline {
     agent any
     stages {
-    stage('Preparation') {
-     steps {
-           git 'https://github.com/roshkovm/jenkinspipeline'
-          }
-       }
-   stage('DockerImageBuild') {
+    stage('DockerImageBuild') {
    steps {
          sh 'chmod +x ./docker_image_build.sh'
          sh './docker_image_build.sh'
