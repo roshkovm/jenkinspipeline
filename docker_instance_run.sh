@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 DOCKER_INSTANCE_NAME=nginx_web
 

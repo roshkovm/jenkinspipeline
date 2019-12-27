@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 echo
 echo "Create new mynginx Docker image..."
 echo
