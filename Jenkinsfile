@@ -6,11 +6,16 @@ pipeline {
            git 'https://github.com/roshkovm/jenkinspipeline'
           }
        }
-  stage('DockerImageBuild') { 
+  stage('DockerImageBuild') {
    steps {
          sh 'echo "Build Docker image..."'
      }
-       }
+ stage('RunBashScript') {
+    steps {
+            sh 'chmod +x test.sh'
+            sh './test.sh'
+      }
+   }
   stage('Results') {
   steps {
        sh 'ls -l'
