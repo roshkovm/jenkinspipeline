@@ -13,7 +13,11 @@ pipeline {
          sh './docker_image_build.sh'
         }
    }
-
+   stage('DockerInstanceRun') {
+       steps {
+       sh 'chmod +x ./docker_instance_run.sh'
+       sh './docker_instance_run.sh'
+   }
 
     stage('Results') {
        steps {
