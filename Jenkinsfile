@@ -13,12 +13,8 @@ pipeline {
          sh './docker_image_build.sh'
         }
    }
-    stage('RunBashScript') {
-    steps {
-            sh 'chmod +x test.sh'
-            sh './test.sh'
-       }
-   }
+
+
     stage('Results') {
        steps {
           sh 'ls -l'
