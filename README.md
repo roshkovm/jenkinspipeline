@@ -4,7 +4,7 @@
 
 ##### 2. Create GitHub Repo Webhook
 - Open Github URL:&nbsp; _https://github.com/roshkovm/jenkinspipeline_
-- Go to:   _Settings - Webhooks_
+- Go to:   _**Settings - Webhooks**_
 - Add Webhook URL: &nbsp;_http://x.x.x.x:8080/github-webhook/_
 
 Where, <br>
