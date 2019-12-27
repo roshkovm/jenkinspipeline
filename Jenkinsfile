@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('Preparation') {
      steps {
-           git 'https://github.com/roshkovm/nginx_repo.git'
+           git 'https://github.com/roshkovm/jenkinspipeline'
           }
        }
   stage('DockerImageBuild') {
