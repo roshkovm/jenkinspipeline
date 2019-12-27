@@ -9,6 +9,8 @@ pipeline {
    stage('DockerImageBuild') {
    steps {
          sh 'echo "Build Docker image..."'
+         sh 'chmod +x ./docker_image_build.sh'
+         sh './docker_image_build.sh'
         }
    }
     stage('RunBashScript') {
