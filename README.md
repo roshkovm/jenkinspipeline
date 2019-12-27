@@ -11,12 +11,12 @@ Where, <br>
 __x.x.x.x__ - IP address Jenkins Server
 
 ##### 3. Run Jenkins Docker Instance on EC2:
-```console
+```
 # docker run -d -it -p 8080:8080 -p 50000:50000 -u 0 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock 4oh4/jenkins-docker
 ```
 
 ##### 4. Check automatically created Docker Volume
-```console
+```
 # docker volume ls
 DRIVER              VOLUME NAME
 local               jenkins_home
@@ -27,7 +27,7 @@ jenkins_home
 
 ##### 5. Connect to Jenkins Server:
 http://x.x.x.x:8080
-```console
+```
 # cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword
 xxxxxxxxxxxxx
 ```
@@ -35,21 +35,21 @@ __NOTE__:<br>
 Put hash in Jenkins login page. Go over Jenkins Menu and Install suggested modules and create new user.
 
 ##### 6. Restart Jenkins Docker instance (check, that configuration data is saved)
-```console
+```
 # docker ps
 # docker stop instance-id
 # docker rm instance-id
 # docker run -d -it -p 8080:8080 -p 50000:50000 -u 0 -v jenkins_home:/var/jenkins_home -v /var/run/ docker.sock:/var/run/docker.sock 4oh4/jenkins-docker
 ```
 ##### 7. Create Jenkins Simple Pipeline Job
-<b>_Build Triggers_ </b><br>
+_**Build Triggers**_<br>
 _[x] GitHub hook trigger for GITScm polling_ <br>
-<b>_Pipeline_ </b><br>
+_**Pipeline**_<br>
 _Definition Pipeline script from SCM_ <br>
-<b>_SCM - GIT_ </b><br>
-_Repository URL:_ https://github.com/roshkovm/jenkinspipeline <br>
-_Credentials: xxxxxxxx_ <br>
-_Script Path: Jenkinsfile_ <br>
+_**SCM - GIT**_<br>
+_**Repository URL**: https://github.com/roshkovm/jenkinspipeline_<br>
+_**Credentials**: xxxxxxxx_ <br>
+_**Script Path**: Jenkinsfile_ <br>
 
 __Note:__<br>
 Example __Jenkinsfile__:<br>
