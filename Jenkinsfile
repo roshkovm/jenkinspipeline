@@ -18,9 +18,16 @@ pipeline {
          sh './docker_instance_run.sh'
     }
    }
+   stage('OldDockerImageClean') {
+   steps {
+         sh 'chmod +x ./docker_image_clean.sh'
+         sh './docker_image_clean.sh'
+         }
+   }
     stage('Results') {
        steps {
-          sh 'ls -l'
+         sh 'chmod +x ./docker_status.sh'
+         sh './docker_status.sh'
        }
     }
   }
