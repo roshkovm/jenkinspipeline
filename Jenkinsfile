@@ -6,7 +6,7 @@ pipeline {
            git 'https://github.com/roshkovm/jenkinspipeline'
           }
        }
-  stage('DockerImageBuild') {
+  stage('DockerImageBuild') { 
    steps {
          sh 'echo "Build Docker image..."'
      }
